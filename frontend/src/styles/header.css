@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 16px;
+}
+
+.header a {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 16px;
+    position: relative;
+    text-decoration: none;
+    
+    font-size: 1.2rem;
+    color: black;
+}
+
+.header a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px;
+    transform: translateY(5px);
+    background: #93ec88; 
+    transition: width 0.3s ease-in-out; 
+}
+
+.header a:hover::before {
+    width: 100%;
+}
+
+.right_section_header {
+    display: flex;
+}
+
+.left_section_header {
+    display: flex;
+}

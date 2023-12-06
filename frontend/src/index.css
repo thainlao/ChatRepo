@@ -1,0 +1,12 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+	font-family: 'myfont';
+}
+
+@font-face {
+	font-family: 'myfont';
+	src: url('./assets/Mikar.ttf');
+}
+

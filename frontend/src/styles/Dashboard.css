@@ -1,0 +1,51 @@
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.user_avatar {
+    height: 120px;
+    width: 120px;
+    background: linear-gradient(rgb(201, 156, 31),rgb(212, 162, 24));
+    border-radius: 50%;
+    position: relative;
+}
+
+.user_avatar h4{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1.5rem;
+}
+
+.dashboard button {
+    padding: 18px;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    color: black;
+    font-size: 1rem;
+    background-color: rgb(224, 198, 163);
+&:hover{
+    background-color: rgb(206, 175, 135);
+}}
+
+.dashboard form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboard form input {
+    padding: 12px;
+    background-color: rgb(158, 183, 204);
+    border-radius: 12px;
+    cursor: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+}

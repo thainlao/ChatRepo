@@ -1,0 +1,19 @@
+.chat {
+    display: flex;
+    height: 100vh;
+}
+.left_section_chat {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    width: 33%;
+    padding: 12px;
+}
+
+.right_section_chat {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(117, 117, 218);
+    width: 67%;
+    padding: 12px;
+}
