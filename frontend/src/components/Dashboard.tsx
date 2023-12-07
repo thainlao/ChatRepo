@@ -96,6 +96,19 @@ const Dashboard: React.FC = () => {
   .reduce((acc, balance) => acc + parseFloat(balance), 0)
   .toFixed(6);
 
+  useEffect(() => {
+    if (status) {
+        toast.success(status, {
+            position: 'bottom-right', // Устанавливаем позицию в правый нижний угол
+            autoClose: 3000, // Закрыть уведомление через 3 секунды
+            style: {
+                background: 'white',
+                color: 'black',
+            },
+        });
+    }
+}, [status]);
+
     return (
         <div className='dashboard'>
             <div className='user_avatar'>
@@ -128,7 +141,8 @@ const Dashboard: React.FC = () => {
             <div>
               Total Value: {loadedWallet ? 'Loading...' : `${totalValue} ETH`}
             </div>
-
+            
+            <a href='/setting'>Настройки</a>
             <button onClick={handleLogout}>Выйти</button>
         </div>
     )

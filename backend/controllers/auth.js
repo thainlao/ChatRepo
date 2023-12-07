@@ -140,3 +140,51 @@ export const addEthWallet = async (req, res) => {
     res.json({message: 'Произошла ошибка при добавлении Wallet'})
   }
 }
+
+export const updateUserUsername = async (req, res) => {
+  try {
+    const { newUsername } = req.body;
+
+    const existingUserWithUsername = await User.findOne({ username: newUsername });
+    if (existingUserWithUsername) {
+      return res.json({ message: "Имя пользователя уже занято" });
+    }
+
+    const user = await User.findById(req.userId);
+
+    if (!user) {
+      return res.json({ message: "Пользователь не найден" });
+    }
+
+    user.username = newUsername;
+    await user.save();
+
+    res.json({ message: "Имя пользователя успешно обновлено" });
+  } catch (error) {
+    res.json({ message: "Произошла ошибка" });
+  }
+};
+
+export const updateUserEmail = async (req, res) => {
+  try {
+    const { newEmail } = req.body;
+    const existingUserWithEmail = await User.findOne({ email: newEmail });
+
+    if (existingUserWithEmail) {
+      return res.json({ message: "Email уже занят" });
+    }
+
+    const user = await User.findById(req.userId);
+
+    if (!user) {
+      return res.json({ message: "Пользователь не найден" });
+    }
+
+    user.email = newEmail;
+    await user.save();
+
+    res.json({ message: "Email успешно обновлен" });
+  } catch (error) {
+    res.json({ message: "Произошла ошибка" });
+  }
+};

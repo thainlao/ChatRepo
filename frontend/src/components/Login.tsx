@@ -51,7 +51,7 @@ const Login = () => {
 
     return (
         <div className='register'>
-            <h3>Login Page</h3>
+            <h3>Login to the best nft project</h3>
                 <form onSubmit={(e) => e.preventDefault()} className='register_container'>
                     <div>
                         <h2>E-mail</h2>

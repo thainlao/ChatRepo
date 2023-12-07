@@ -2,7 +2,7 @@
 	padding: 0px;
 	margin: 0px;
 	border: none;
-	font-family: 'myfont';
+	font-family: "Mona Sans","Mona Sans Header Fallback",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
 @font-face {

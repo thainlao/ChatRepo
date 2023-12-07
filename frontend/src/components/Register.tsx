@@ -49,7 +49,7 @@ const Register = () => {
 
     return (
         <div className='register'>
-            <h3>Register Page</h3>
+            <h3>Register on future best nft product</h3>
                 <form onSubmit={(e) => e.preventDefault()} className='register_container'>
                     <div> 
                         <h2>Username</h2>

@@ -7,7 +7,7 @@ import authRouter from "./router/auth.js"
 dotenv.config()
 
 const app = express();
-const PORT = 5000;
+const PORT = 5001;
 app.use(cors({
     credentials: true,
     origin: process.env.CLIENT_URL
